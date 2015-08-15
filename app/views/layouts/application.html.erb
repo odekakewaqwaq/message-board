@@ -6,15 +6,31 @@
   <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+    body {background-color:#f5f8fa}
+    .navbar-header{
+      margin:0px;
+    }
+    .navbar-brand{
+      font-size:30px;
+    }
+    .container{
+      max-width:720px;
+      margin:0 auto;
+    }
+    
+    .panel-heading{
+      font-size:20px;
+    }
+
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Message Board</a>
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Message Board</a>
+      </div>
     </div>
-  </div>
-  </nav>
   <div class ="container">
     <%= yield %>
   </div>
