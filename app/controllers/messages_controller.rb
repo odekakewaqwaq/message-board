@@ -22,10 +22,11 @@ class MessagesController < ApplicationController
   end
     
   def update
-    if @message.update(meassage_params)
-      redirect to root_path , notice:'メッセージを編集しました'
+    if @message.update(message_params)
+      redirect_to root_path , notice:'メッセージを編集しました'
     else
       render 'edit'
+    end
   end
   
   private
@@ -35,6 +36,6 @@ class MessagesController < ApplicationController
   end
   
   def set_message
-    @message = Meassage.find(params[:id])
+    @message = Message.find (params[:id])
   end
 end
