@@ -5,8 +5,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
-#本番ではpostgressをしよう
+#本番ではpostgressを使用
 gem 'pg',group: :production
+#ログ取得用
+gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
